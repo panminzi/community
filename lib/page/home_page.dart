@@ -60,5 +60,7 @@ class _HomepageState extends State<Homepage> {
     TelResponse telResponse = TelResponse.fromJson(response.data);
 //  print(telResponse.code);
     result = response.data;
+    result = response.data;
+    result = response.data;
   }
 }
