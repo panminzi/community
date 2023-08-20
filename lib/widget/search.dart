@@ -55,8 +55,12 @@ class _SearchBarsState extends State<SearchBars> {
             child: Row(
               children: [
                 Container(
+                  height: 40,
+                  width: 20,
+                ),
+                Container(
                     height: 40,
-                    width: 300,
+                    width: 280,
                     margin: EdgeInsets.only(left: 5, right: 5),
                     decoration: BoxDecoration(
                       color: Colors.white,

@@ -5,7 +5,7 @@ class MyDio {
 
   MyDio() {
     BaseOptions options = BaseOptions(
-      baseUrl: 'https://api.oioweb.cn/api/common', // 设置接口的基本URL
+      baseUrl: 'https://yapi.pro/mock/65063/showPublishedPost', // 设置接口的基本URL
       connectTimeout: Duration(milliseconds: 5000), // 设置连接超时时间
       receiveTimeout: Duration(milliseconds: 3000), // 设置接收超时时间
     );

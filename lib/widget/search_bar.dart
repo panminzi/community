@@ -12,6 +12,7 @@ class _SearchBarState extends State<SearchBar> {
   Widget build(BuildContext context) {
     return GestureDetector(
         child: Container(
+            width: 300,
             height: 45,
             padding: EdgeInsets.all(5),
             child: Stack(

@@ -1,10 +1,14 @@
+import 'package:community/http/my_dio.dart';
 import 'package:community/page/home_page.dart';
 import 'package:community/page/mine_page.dart';
 import 'package:community/page/public_page.dart';
 import 'package:community/page/search_detail.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+import 'model/post.dart';
+
+void main() async{
   runApp(const MyApp());
 }
 
