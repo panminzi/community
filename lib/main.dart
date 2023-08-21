@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         ),
         initialRoute: '/home',
         routes: {
-          '/home': (context) => const Homepage(),
+          '/home': (context) => Homepage(),
           '/search': (context) =>  SearchDetail(),
           '/mine': (context) => MinePage(),
           '/public':(context) => PublicPage(),

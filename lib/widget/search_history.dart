@@ -5,8 +5,10 @@ import 'package:flutter/material.dart';
  */
 
 class SearchHistory extends StatefulWidget {
-  List<String> list;
- final Function() clearHistory;
+  var list=["fff"];
+  
+  var clearHistory;
+  
   SearchHistory({Key? key, required this.list, required this.clearHistory})
       : super(key: key) {
   list.removeWhere((element) => element.isEmpty);
@@ -43,7 +45,7 @@ class _SearchHistoryState extends State<SearchHistory> {
                 child: Padding(
                   padding: EdgeInsets.only(right: 10),
                   child: Text(
-                    widget.list.isNotEmpty ? '清空历史' : '',
+                    widget.list.isNotEmpty ? '' : '清空历史',
                     style: TextStyle(
                       fontSize: 15,
                       color: Colors.black,

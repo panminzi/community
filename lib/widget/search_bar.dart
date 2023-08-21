@@ -28,7 +28,7 @@ class _SearchBarState extends State<SearchBar> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     TextButton.icon(
-                      icon: Icon(Icons.search),
+                      icon: Icon(Icons.zoom_in),
                       label: Text(
                         "搜索",
                         style: TextStyle(color: Colors.blueGrey),

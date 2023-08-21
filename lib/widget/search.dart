@@ -19,7 +19,7 @@ class SearchBars extends StatefulWidget {
 
 class _SearchBarsState extends State<SearchBars> {
   bool _showClear = false;
-  bool click = false;
+ // bool click = false;
   var list = [];
 
   final TextEditingController _textEditingController = TextEditingController();
@@ -27,7 +27,7 @@ class _SearchBarsState extends State<SearchBars> {
     if (text.length > 0) {
       setState(() {
         _showClear = true;
-        click = true;
+       // click = true;
       });
     } else
       _showClear = false;
@@ -70,7 +70,7 @@ class _SearchBarsState extends State<SearchBars> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Icon(
-                          Icons.search,
+                          Icons.zoom_in,
                           color: Colors.black,
                         ),
                         Expanded(
