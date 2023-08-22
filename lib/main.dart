@@ -7,6 +7,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
 import 'model/post.dart';
+import 'page/post_detail.dart';
 
 void main() async{
   runApp(const MyApp());
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
           '/search': (context) =>  SearchDetail(),
           '/mine': (context) => MinePage(),
           '/public':(context) => PublicPage(),
+          '/post':(context) => PostDetail(),
         },
         home: const Homepage());
   }

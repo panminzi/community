@@ -24,6 +24,7 @@ class _HomepageState extends State<Homepage> {
     color: Colors.amber,
   );
   bool like = false;
+  bool refresh = false;
   bool isCollect = false;
   dynamic title0;
   dynamic userName0;
@@ -61,117 +62,128 @@ class _HomepageState extends State<Homepage> {
             itemExtent: 90,
             itemBuilder: (context, index) {
               return ListTile(
-                  title: Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Colors.green,
-                          //width: 1.0,
-                        ),
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(15.0),
-                      ),
-                      child: Column(
-                        children: [
-                          Row(
-                            children: [
-                              Container(
-                                //color: Colors.green,
-                                height: 50,
-                                width: 230,
-                                child: ConstrainedBox(
-                                    constraints: BoxConstraints.expand(),
-                                    // Expanded(
-                                    child: Text(
-                                      title0.toString(),
-                                      style: TextStyle(fontSize: 25),
-                                    )),
-                              ),
-                              Container(
-                                //  color: Colors.red,
-                                height: 30,
-                                width: 20,
-                                child: Icon(Icons.loyalty),
-                              ),
-                              Container(
-                                  decoration: BoxDecoration(
-                                    // color: Color.fromARGB(255, 164, 219, 166),
-                                    borderRadius: BorderRadius.circular(10.0),
-                                  ),
-                                  height: 30,
-                                  child: Text(
-                                    "标签",
-                                    style: TextStyle(
-                                        color: Colors.black, fontSize: 18),
-                                  )),
-                            ],
+                title: GestureDetector(
+                    child: Container(
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.green,
+                            //width: 1.0,
                           ),
-                          Row(
-                            children: [
-                              Container(
-                                  // color: Colors.red,
-                                  alignment: Alignment.bottomLeft,
-                                  width: 180,
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(15.0),
+                        ),
+                        child: Column(
+                          children: [
+                            Row(
+                              children: [
+                                Container(
+                                  //color: Colors.green,
+                                  height: 50,
+                                  width: 280,
+                                  child: ConstrainedBox(
+                                      constraints: BoxConstraints.expand(),
+                                      // Expanded(
+                                      child: Text(
+                                        title0.toString(),
+                                        style: TextStyle(fontSize: 25),
+                                      )),
+                                ),
+                                Container(
+                                  //  color: Colors.red,
+                                  height: 30,
+                                  width: 20,
+                                  child: Icon(
+                                    Icons.loyalty,
+                                    size: 18,
+                                  ),
+                                ),
+                                Container(
+                                    decoration: BoxDecoration(
+                                      // color: Color.fromARGB(255, 164, 219, 166),
+                                      borderRadius: BorderRadius.circular(10.0),
+                                    ),
+                                    height: 30,
+                                    child: Text(
+                                      "标签",
+                                      style: TextStyle(
+                                          color: Colors.grey, fontSize: 18),
+                                    )),
+                                //   IconButton(
+                                //       onPressed: () {
+                                //         Navigator.of(context).pushNamed('/post');
+                                //       },
+                                //       icon: Icon(Icons.send))
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Container(
+                                    // color: Colors.red,
+                                    alignment: Alignment.bottomLeft,
+                                    width: 270,
+                                    height: 38,
+                                    child: Row(
+                                      children: [
+                                        Icon(Icons.watch_later),
+                                        Text(
+                                          postTime0.toString(),
+                                          style: TextStyle(
+                                              color: Colors.grey, fontSize: 15),
+                                        ),
+                                      ],
+                                    )),
+                                Container(
+                                  alignment: Alignment.bottomCenter,
+                                  width: 80,
                                   height: 38,
-                                  child: Row(
-                                    children: [
-                                      Icon(Icons.watch_later),
-                                      Text(
-                                        postTime0.toString(),
-                                        style: TextStyle(
-                                            color: Colors.grey, fontSize: 15),
-                                      ),
-                                    ],
-                                  )),
-                              Container(
-                                alignment: Alignment.bottomCenter,
-                                width: 80,
-                                height: 38,
-                                child: Text(
-                                  userName0.toString(),
-                                  style: TextStyle(
-                                      color: Colors.grey, fontSize: 15),
-                                ),
-                              ),
-                              Container(
-                                width: 15,
-                              ),
-                              Container(
-                                alignment: Alignment.bottomRight,
-                                width: 50,
-                                height: 38,
-                                child: GestureDetector(
-                                  onTap: () {
-                                    setState(() {
-                                      like = !like;
-                                    });
-                                  },
-                                  child: Icon(
-                                    Icons.thumb_up,
-                                    color: like ? Colors.red : Colors.grey,
+                                  child: Text(
+                                    userName0.toString(),
+                                    style: TextStyle(
+                                        color: Colors.grey, fontSize: 15),
                                   ),
                                 ),
-                              ),
-                              Container(
-                                alignment: Alignment.bottomCenter,
-                                width: 50,
-                                height: 38,
-                                child: GestureDetector(
-                                  onTap: () {
-                                    setState(() {
-                                      isCollect = !isCollect;
-                                    });
-                                  },
-                                  child: Icon(
-                                    Icons.star,
-                                    color:
-                                        isCollect ? Colors.amber : Colors.grey,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          )
-                        ],
-                      )));
+                                // Container(
+                                //   width: 12,
+                                // ),
+                                // Container(
+                                //   alignment: Alignment.bottomRight,
+                                //   width: 50,
+                                //   height: 38,
+                                //   child: GestureDetector(
+                                //     onTap: () {
+                                //       setState(() {
+                                //         like = !like;
+                                //       });
+                                //     },
+                                //     child: Icon(
+                                //       Icons.thumb_up,
+                                //       color: like ? Colors.red : Colors.grey,
+                                //     ),
+                                //   ),
+                                // ),
+                                // Container(
+                                //   alignment: Alignment.bottomCenter,
+                                //   width: 50,
+                                //   height: 38,
+                                //   child: GestureDetector(
+                                //     onTap: () {
+                                //       setState(() {
+                                //         isCollect = !isCollect;
+                                //       });
+                                //     },
+                                //     child: Icon(
+                                //       Icons.star,
+                                //       color:
+                                //           isCollect ? Colors.amber : Colors.grey,
+                                //     ),
+                                //   ),
+                                // ),
+                              ],
+                            )
+                          ],
+                        ))),
+                onTap: () => Navigator.of(context).pushNamed('/post'),
+              );
             }),
         floatingActionButton: Container(
             width: 60,
@@ -204,4 +216,11 @@ class _HomepageState extends State<Homepage> {
       labelContent0 = post.labelContent;
     });
   }
+}
+
+f() {
+  return CircularProgressIndicator(
+    backgroundColor: Colors.red,
+    valueColor: AlwaysStoppedAnimation(Colors.blue),
+  );
 }

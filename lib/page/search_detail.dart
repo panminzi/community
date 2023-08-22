@@ -1,4 +1,4 @@
-import 'package:community/widget/search.dart';
+//import 'package:community/widget/search.dart';
 //import 'package:community/widget/search_history.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -35,6 +35,7 @@ class _SearchDetailState extends State<SearchDetail> {
         appBar: AppBar(
           automaticallyImplyLeading: false, //隐藏左侧默认返回按钮
           title: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Container(
                   width: 320,
@@ -115,9 +116,9 @@ class _SearchDetailState extends State<SearchDetail> {
                 child: SearchText(context),
                 onTap: () {
                   setState(() {
-                     list.add(history);
+                    list.add(history);
                   });
-                 
+
                   //  print(list.length);
                 },
               )
@@ -165,9 +166,8 @@ class _SearchDetailState extends State<SearchDetail> {
                         ),
                         onTap: () {
                           setState(() {
-                                clearHistory();
+                            clearHistory();
                           });
-                      
                         },
                       )
                     ],
@@ -217,6 +217,7 @@ class _SearchDetailState extends State<SearchDetail> {
     ));
   }
 }
+
 
 //取消-富文本点击方式实现
 

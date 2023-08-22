@@ -29,7 +29,7 @@ class _PublicPageState extends State<PublicPage> {
         appBar: AppBar(
           title: Row(
             children: [
-              Text("写说说"),
+              Text("帖子制作中"),
             ],
           ),
           actions: [
