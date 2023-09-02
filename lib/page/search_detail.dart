@@ -11,7 +11,9 @@ class SearchDetail extends StatefulWidget {
 
 class _SearchDetailState extends State<SearchDetail> {
   dynamic history;
+  dynamic list1 = [];
   bool _showClear = false;
+  dynamic t;
   final TextEditingController _textEditingController = TextEditingController();
   void _onChanged(String text) {
     if (text.length > 0) {
@@ -189,20 +191,25 @@ class _SearchDetailState extends State<SearchDetail> {
   //  构建子组件
   _listItem(String title) {
     // FittedBox用于调整其子部件的大小以适应可用空间
-    return FittedBox(
-      fit: BoxFit.scaleDown,
-      alignment: Alignment.centerLeft,
-      child: Container(
-        padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-        margin: EdgeInsets.all(5),
-        decoration: BoxDecoration(
-            color: Colors.grey.withOpacity(0.5),
-            borderRadius: BorderRadius.circular(10)),
-        child: Text(
-          title,
-          style: TextStyle(fontSize: 12),
+    return GestureDetector(
+      child: FittedBox(
+        fit: BoxFit.scaleDown,
+        alignment: Alignment.centerLeft,
+        child: Container(
+          padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+          margin: EdgeInsets.all(5),
+          decoration: BoxDecoration(
+              color: Colors.grey.withOpacity(0.5),
+              borderRadius: BorderRadius.circular(10)),
+          child: Text(
+            title,
+            style: TextStyle(fontSize: 12),
+          ),
         ),
       ),
+      onTap: () {
+//_onChanged(title);
+      },
     );
   }
 
@@ -217,7 +224,3 @@ class _SearchDetailState extends State<SearchDetail> {
     ));
   }
 }
-
-
-//取消-富文本点击方式实现
-

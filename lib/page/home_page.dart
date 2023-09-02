@@ -3,7 +3,6 @@ import 'package:community/model/post_model.dart';
 import 'package:community/widget/search_bar.dart';
 import 'package:flutter/material.dart';
 import '../model/post.dart';
-import '../utils/get_data.dart';
 import '../widget/bottom_navBar.dart';
 import 'package:dio/dio.dart';
 
