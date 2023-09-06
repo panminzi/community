@@ -1,5 +1,5 @@
 //import 'package:community/widget/search.dart';
-//import 'package:community/widget/search_history.dart';
+import 'package:community/database/base_cache.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +14,7 @@ class _SearchDetailState extends State<SearchDetail> {
   dynamic list1 = [];
   bool _showClear = false;
   dynamic t;
+  BaseCache baseCache = BaseCache.getInstance();
   final TextEditingController _textEditingController = TextEditingController();
   void _onChanged(String text) {
     if (text.length > 0) {
