@@ -57,18 +57,20 @@ class _HomepageState extends State<Homepage> {
           ],
         ),
         body: ListView.builder(
-            itemCount: 2,
+            itemCount: 1,
             itemExtent: 90,
             itemBuilder: (context, index) {
               return ListTile(
                 title: GestureDetector(
                     child: Container(
+                      height: 90,
                         decoration: BoxDecoration(
+                         // color:Color.fromARGB(255, 230, 168, 189),
                           border: Border.all(
                             color: Colors.green,
                             //width: 1.0,
                           ),
-                          color: Colors.white,
+                        //  color: Colors.white,
                           borderRadius: BorderRadius.circular(15.0),
                         ),
                         child: Column(
@@ -103,7 +105,7 @@ class _HomepageState extends State<Homepage> {
                                     ),
                                     height: 30,
                                     child: Text(
-                                      "标签",
+                                      labelContent0,
                                       style: TextStyle(
                                           color: Colors.grey, fontSize: 18),
                                     )),
@@ -141,6 +143,7 @@ class _HomepageState extends State<Homepage> {
                                         color: Colors.grey, fontSize: 15),
                                   ),
                                 ),
+                                // 主页即有收藏点赞功能
                                 // Container(
                                 //   width: 12,
                                 // ),
