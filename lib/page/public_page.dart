@@ -25,70 +25,81 @@ class _PublicPageState extends State<PublicPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: Row(
-            children: [
-              Text("帖子制作中"),
-            ],
+    return Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: NetworkImage(
+                'https://pic4.zhimg.com/v2-affd6b88da47f8647b430c2040dd3123_r.jpg?source=1940ef5c'),
+            fit: BoxFit.cover,
           ),
-          actions: [
-            TextButton(
-                onPressed: () {},
-                child: Text(
-                  "发布",
-                  style: TextStyle(
-                      color: a == true ? Colors.white : Colors.grey,
-                      fontSize: 18),
-                ))
-          ],
         ),
-        body: SingleChildScrollView(
-            child: ConstrainedBox(
-                constraints: BoxConstraints(minHeight: 120),
-                child: Column(children: <Widget>[
-                  Container(
-                      margin: EdgeInsets.only(left: 18.0, right: 18.0, top: 15),
-                      height: 300,
-                      width: 380,
-                      decoration: new BoxDecoration(
+        child: Scaffold(
+            backgroundColor: Colors.transparent,
+            appBar: AppBar(
+              backgroundColor: Color.fromARGB(255, 227, 190, 202),
+              title: Row(
+                children: [
+                  Text("帖子制作中",style: TextStyle(color: Colors.black),),
+                ],
+              ),
+              actions: [
+                TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "发布",
+                      style: TextStyle(
+                          color: a == true ? Colors.black: Colors.grey,
+                          fontSize: 18),
+                    ))
+              ],
+            ),
+            body: SingleChildScrollView(
+                child: ConstrainedBox(
+                    constraints: BoxConstraints(minHeight: 120),
+                    child: Column(children: <Widget>[
+                      Container(
+                          margin:
+                              EdgeInsets.only(left: 18.0, right: 18.0, top: 15),
+                          height: 300,
+                          width: 380,
+                          decoration: new BoxDecoration(
 //color: Colors.black,
-                          border:
-                              new Border.all(color: Colors.grey, width: 0.5),
-                          borderRadius: new BorderRadius.circular((10.0))),
-                      child: Column(
-                        children: [
-                          TextField(
-                            autofocus: true,
-                            controller: _textEditingController,
-                            onChanged: _onChanged,
-                            maxLines: null,
-                            minLines: 1,
-                            decoration: InputDecoration(
-                                enabledBorder: new UnderlineInputBorder(
-                                  borderSide: BorderSide.none,
-                                ),
-                                focusedBorder: new UnderlineInputBorder(
-                                  borderSide: BorderSide.none,
-                                ),
-                                contentPadding: EdgeInsets.symmetric(
-                                    vertical: 10, horizontal: 10)),
-                          ),
-                        ],
-                      )),
-                  Container(
+                              border: new Border.all(
+                                  color: Colors.grey, width: 0.5),
+                              borderRadius: new BorderRadius.circular((10.0))),
+                          child: Column(
+                            children: [
+                              TextField(
+                                autofocus: true,
+                                controller: _textEditingController,
+                                onChanged: _onChanged,
+                                maxLines: null,
+                                minLines: 1,
+                                decoration: InputDecoration(
+                                    enabledBorder: new UnderlineInputBorder(
+                                      borderSide: BorderSide.none,
+                                    ),
+                                    focusedBorder: new UnderlineInputBorder(
+                                      borderSide: BorderSide.none,
+                                    ),
+                                    contentPadding: EdgeInsets.symmetric(
+                                        vertical: 10, horizontal: 10)),
+                              ),
+                            ],
+                          )),
+                      Container(
 //color: Colors.amber,
-                      height: 50,
-                      width: 350,
-                      margin: EdgeInsets.only(left: 18),
-                      child: Align(
-                        alignment: Alignment.centerLeft,
-                        child: ElevatedButton.icon(
-                          icon: Icon(Icons.picture_as_pdf_sharp),
-                          label: Text("上传图片"),
-                          onPressed: _onPressed,
-                        ),
-                      ))
-                ]))));
+                          height: 50,
+                          width: 350,
+                          margin: EdgeInsets.only(left: 18),
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: ElevatedButton.icon(
+                              icon: Icon(Icons.picture_as_pdf_sharp),
+                              label: Text("上传图片"),
+                              onPressed: _onPressed,
+                            ),
+                          ))
+                    ])))));
   }
 }

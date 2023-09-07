@@ -12,7 +12,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color.fromARGB(255, 171, 204, 231),
+     color: Color.fromARGB(255, 171, 204, 231),
       child: Row(
         children: [
           GestureDetector(

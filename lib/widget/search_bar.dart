@@ -21,7 +21,7 @@ class _SearchBarState extends State<SearchBar> {
               children: <Widget>[
                 Container(
                   decoration: BoxDecoration(
-                      color: Colors.white,
+color: Colors.white,
                       borderRadius: BorderRadius.circular(15.0)),
                 ),
                 Row(
