@@ -29,14 +29,14 @@ class _PublicPageState extends State<PublicPage> {
         decoration: BoxDecoration(
           image: DecorationImage(
             image: NetworkImage(
-                'https://pic4.zhimg.com/v2-affd6b88da47f8647b430c2040dd3123_r.jpg?source=1940ef5c'),
+                "https://pic1.zhimg.com/v2-593bd035fe17f9099abe4c74fedfb5b7_r.jpg?source=1940ef5c"),
             fit: BoxFit.cover,
           ),
         ),
         child: Scaffold(
             backgroundColor: Colors.transparent,
             appBar: AppBar(
-              backgroundColor: Color.fromARGB(255, 227, 190, 202),
+             backgroundColor: Color.fromARGB(255, 55, 116, 144),
               title: Row(
                 children: [
                   Text("帖子制作中",style: TextStyle(color: Colors.black),),
@@ -65,7 +65,7 @@ class _PublicPageState extends State<PublicPage> {
                           decoration: new BoxDecoration(
 //color: Colors.black,
                               border: new Border.all(
-                                  color: Colors.grey, width: 0.5),
+                                  color: Color.fromARGB(255, 147, 246, 33), width: 0.5),
                               borderRadius: new BorderRadius.circular((10.0))),
                           child: Column(
                             children: [

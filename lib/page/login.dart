@@ -32,10 +32,12 @@ class _loginpageState extends State<loginpage> {
             centerTitle: true,
             backgroundColor: Colors.transparent,
           ),
-          body: Center(
-            child: Form(
+          body: Form(
               key: _formKey,
               autovalidateMode: AutovalidateMode.onUserInteraction,
+child: SingleChildScrollView(
+              child: ConstrainedBox(
+                 constraints: BoxConstraints(minHeight: 120),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
@@ -115,6 +117,6 @@ class _loginpageState extends State<loginpage> {
               ),
             ),
           )),
-    );
+    ));
   }
 }

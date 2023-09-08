@@ -43,10 +43,10 @@ class _HomepageState extends State<Homepage> {
               "https://pic1.zhimg.com/v2-593bd035fe17f9099abe4c74fedfb5b7_r.jpg?source=1940ef5c"),
           fit: BoxFit.cover,
         )),
-               child: Scaffold(
-                backgroundColor: Colors.transparent,
+        child: Scaffold(
+            backgroundColor: Colors.transparent,
             appBar: AppBar(
-              backgroundColor:Color.fromARGB(255, 55, 116, 144),
+              backgroundColor: Color.fromARGB(255, 55, 116, 144),
               title: SearchBar(),
               leading: Builder(builder: (context) {
                 return IconButton(
@@ -103,7 +103,7 @@ class _HomepageState extends State<Homepage> {
                                       height: 30,
                                       width: 20,
                                       child: Icon(
-                                        color:Colors.black,
+                                        color: Colors.black,
                                         Icons.loyalty,
                                         size: 18,
                                       ),
@@ -118,7 +118,8 @@ class _HomepageState extends State<Homepage> {
                                         child: Text(
                                           labelContent0.toString(),
                                           style: TextStyle(
-                                              color: Colors.black, fontSize: 18),
+                                              color: Colors.black,
+                                              fontSize: 18),
                                         )),
                                     //   IconButton(
                                     //       onPressed: () {
