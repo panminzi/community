@@ -64,173 +64,174 @@ class _PostDetailState extends State<PostDetail> {
               ),
               actions: [Icon(Icons.share)],
             ),
-            body: Column(children: [
-              Container(
-                height: 50,
-                // color: Colors.amber,
-                child: Row(
-                  children: [
-                    Container(
-                      width: 150,
-                    ),
-                    Align(
-                        alignment: Alignment.center,
-                        child: Text(
-                          title0.toString(),
-                          style: TextStyle(fontSize: 25),
-                        )),
-                    Container(
-                      width: 70,
-                    ),
-                    Icon(
-                      Icons.loyalty,
-                      size: 18,
-                    ),
-                    Container(
-                      child: Align(
-                        alignment: Alignment.centerRight,
-                        child: Text(labelContent0.toString()),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              //帖子的相关属性
-              Container(
-                  height: 25,
+            body: SingleChildScrollView(
+              child: Column(children: [
+                Container(
+                  height: 50,
+                  // color: Colors.amber,
                   child: Row(
                     children: [
                       Container(
-                        width: 40,
+                        width: 150,
                       ),
-                      Icon(Icons.access_time),
                       Align(
-                        alignment: Alignment.centerRight,
-                        child: Container(
+                          alignment: Alignment.center,
+                          child: Text(
+                            title0.toString(),
+                            style: TextStyle(fontSize: 25),
+                          )),
+                      Container(
+                        width: 70,
+                      ),
+                      Icon(
+                        Icons.loyalty,
+                        size: 18,
+                      ),
+                      Container(
+                        child: Align(
+                          alignment: Alignment.centerRight,
+                          child: Text(labelContent0.toString()),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                //帖子的相关属性
+                Container(
+                    height: 25,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 40,
+                        ),
+                        Icon(Icons.access_time),
+                        Align(
+                          alignment: Alignment.centerRight,
+                          child: Container(
+                              // color: Color.fromARGB(255, 158, 229, 195),
+                              child: Text(postTime0.toString())),
+                        ),
+                        Container(
+                          width: 180,
+                        ),
+                        Icon(Icons.perm_identity),
+                        Container(
                             // color: Color.fromARGB(255, 158, 229, 195),
-                            child: Text(postTime0.toString())),
-                      ),
-                      Container(
-                        width: 180,
-                      ),
-                      Icon(Icons.perm_identity),
-                      Container(
-                          // color: Color.fromARGB(255, 158, 229, 195),
-                          child: Text(userName0.toString()))
-                    ],
-                  )),
-              //帖子的具体内容
-              Container(
-                  height: 420,
-                  child: Column(
-                    children: [
-                      Text(
-                        "但我不能放歌，",
-                        style: TextStyle(fontSize: 19),
-                      ),
-                      Text(
-                        "悄悄是别离的笙箫;",
-                        style: TextStyle(fontSize: 19),
-                      ),
-                      Text(
-                        "夏虫也为我沉默,",
-                        style: TextStyle(fontSize: 19),
-                      ),
-                      Text(
-                        "沉默是今晚的康桥!",
-                        style: TextStyle(fontSize: 19),
-                      )
-                    ],
-                  )),
-              //评论区标志
-              Container(
-                  height: 25,
-                  width: MediaQuery.of(context).size.width,
-                  child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                            child: Text(userName0.toString()))
+                      ],
+                    )),
+                //帖子的具体内容
+                Container(
+                    height: 420,
+                    child: Column(
                       children: [
                         Text(
-                          "评论区",
-                          style: TextStyle(fontSize: 20),
+                          "但我不能放歌，",
+                          style: TextStyle(fontSize: 19),
                         ),
-                      ])),
-              //评论区输入框
-              Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                Container(
-                    width: 400,
-                    height: 45,
-                    child: Container(
-                      height: 60,
-                      //color: Colors.red,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            height: 45,
-                            child: Row(
-                              children: [
-                                Container(
-                                    height: 40,
-                                    width: 380,
-                                    margin: EdgeInsets.only(left: 5, right: 5),
-                                    decoration: BoxDecoration(
-                                      color: Color.fromARGB(255, 237, 232, 234),
-                                      borderRadius: BorderRadius.circular(15.0),
-                                    ),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Icon(
-                                          Icons.mode_edit,
-                                          color: Colors.grey,
-                                        ),
-                                        Expanded(
-                                          child: TextField(
-                                            cursorColor: Colors.black,
-                                            autofocus: false,
-                                            style: TextStyle(
-                                              fontSize: 18.0,
-                                              color: Colors.black,
-                                              fontWeight: FontWeight.w300,
-                                            ),
-                                            decoration: InputDecoration(
-                                              contentPadding: EdgeInsets.only(
-                                                  left: 5, bottom: 10),
-                                              border: InputBorder.none,
-                                            ),
-                                            controller: _textEditingController,
-                                            onChanged: _onChanged,
-                                          ),
-                                        ),
-                                        if (_showpublish)
-                                          GestureDetector(
-                                            child: Icon(Icons.cancel,
-                                                size: 18, color: Colors.grey),
-                                            onTap: () {
-                                              _textEditingController.clear();
-                                              setState(() {
-                                                _onChanged("");
-                                              });
-                                            },
-                                          )
-                                      ],
-                                    )),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
+                        Text(
+                          "悄悄是别离的笙箫;",
+                          style: TextStyle(fontSize: 19),
+                        ),
+                        Text(
+                          "夏虫也为我沉默,",
+                          style: TextStyle(fontSize: 19),
+                        ),
+                        Text(
+                          "沉默是今晚的康桥!",
+                          style: TextStyle(fontSize: 19),
+                        )
+                      ],
                     )),
-              ])
-            ]),
-            bottomNavigationBar: Row(
+                //评论区标志
+                Container(
+                    height: 25,
+                    width: MediaQuery.of(context).size.width,
+                    child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "评论区",
+                            style: TextStyle(fontSize: 20),
+                          ),
+                        ])),
+                //评论区输入框
+                Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  Container(
+                      width: 400,
+                      height: 45,
+                      child: Container(
+                        height: 60,
+                        //color: Colors.red,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                              height: 45,
+                              child: Row(
+                                children: [
+                                  Container(
+                                      height: 40,
+                                      width: 390,
+                                      margin:
+                                          EdgeInsets.only(left: 5, right: 5),
+                                      decoration: BoxDecoration(
+                                        color:
+                                            Color.fromARGB(255, 237, 232, 234),
+                                        borderRadius:
+                                            BorderRadius.circular(5.0),
+                                      ),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Icon(
+                                            Icons.mode_edit,
+                                            color: Colors.grey,
+                                          ),
+                                          Expanded(
+                                            child: TextField(
+                                              cursorColor: Colors.black,
+                                              autofocus: false,
+                                              style: TextStyle(
+                                                fontSize: 18.0,
+                                                color: Colors.black,
+                                                fontWeight: FontWeight.w300,
+                                              ),
+                                              decoration: InputDecoration(
+                                                contentPadding: EdgeInsets.only(
+                                                    left: 5, bottom: 10),
+                                                border: InputBorder.none,
+                                              ),
+                                              controller:
+                                                  _textEditingController,
+                                              onChanged: _onChanged,
+                                            ),
+                                          ),
+                                          Text(
+                                            "发布",
+                                            style: TextStyle(
+                                                fontSize: 18,
+                                                color: _showpublish
+                                                    ? Colors.black
+                                                    : Colors.grey),
+                                          )
+                                        ],
+                                      )),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      )),
+                ])
+              ]),
+            ),
+            bottomNavigationBar: (Row(
               children: [
                 Container(
                   height: 60,
                   width: 10,
-
-                  /// color: Colors.red,
                 ),
                 Container(
                     height: 35,
@@ -284,7 +285,7 @@ class _PostDetailState extends State<PostDetail> {
                   },
                 )
               ],
-            )));
+            ))));
   }
 
   void fun() async {

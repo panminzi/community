@@ -146,8 +146,9 @@ class _HomepageState extends State<Homepage> {
                                             ),
                                           ],
                                         )),
+                                        Icon(Icons.perm_identity),
                                     Container(
-                                      alignment: Alignment.bottomCenter,
+                                      alignment: Alignment.centerLeft,
                                       width: 80,
                                       height: 38,
                                       child: Text(

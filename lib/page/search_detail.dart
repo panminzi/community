@@ -54,7 +54,6 @@ class _SearchDetailState extends State<SearchDetail> {
                       width: 320,
                       child: Container(
                         height: 60,
-                        //color: Colors.red,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
@@ -69,9 +68,13 @@ class _SearchDetailState extends State<SearchDetail> {
                               child: Row(
                                 children: [
                                   Container(
-                                    height: 40,
-                                    width: 20,
-                                  ),
+                                      height: 40,
+                                      width: 20,
+                                      child: GestureDetector(
+                                        child: Icon(Icons.arrow_back_ios),
+                                        onTap: () => Navigator.of(context)
+                                            .pushNamed('/home'),
+                                      )),
                                   Container(
                                       height: 40,
                                       width: 280,
